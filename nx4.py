@@ -176,7 +176,7 @@ pos = nx.spring_layout(G, seed=42, k=0.6, iterations=100, weight='poids')
 # Couleurs selon communauté détectée
 detected_colors = [comm_detected_dict[n] for n in G.nodes()]
 n_comm_det = len(set(detected_colors))
-cmap_nodes = plt.cm.get_cmap('tab10', n_comm_det)
+cmap_nodes = plt.colormaps['tab10'].resampled(n_comm_det)
 node_colors = [cmap_nodes(comm_detected_dict[n]) for n in G.nodes()]
 
 # Tailles selon centralité de degré
