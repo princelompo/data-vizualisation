@@ -127,4 +127,6 @@ axes[1].axis('off')
 
 fig.suptitle("Analyse d'un réseau routier pondéré", fontsize=16, fontweight='bold')
 plt.tight_layout(rect=[0, 0, 1, 0.95])
+plt.savefig("reseau_transport.png", dpi=150, bbox_inches='tight')
+print("Visualisation enregistrée dans reseau_transport.png")
 plt.show()
